@@ -1,27 +1,19 @@
-import { Dispatch, SetStateAction, useState, BaseSyntheticEvent } from 'react';
+import { useState, BaseSyntheticEvent } from 'react';
 import { Button, styled } from '@mui/material';
+
+import { FormProps } from './Form.props';
 import { Mock } from '../../interfaces/mock.interface';
 
-export interface FormState {
-	type: string;
-	description: any;
-	timeToDo?: number;
-}
-
-export interface FormProps {
-	setTasks: Dispatch<SetStateAction<Mock[]>>;
-}
+const InputStyled = styled('input')({
+	display: 'block',
+	border: '1px solid black',
+	padding: 10,
+	borderRadius: 5,
+	marginTop: 10,
+});
 
 const Form = ({ setTasks }: FormProps) => {
-	const InputStyled = styled('input')({
-		display: 'block',
-		border: '1px solid black',
-		padding: 10,
-		borderRadius: 5,
-		marginTop: 10,
-	});
-
-	const [formState, setFormState] = useState<FormState>({
+	const [formState, setFormState] = useState<Mock>({
 		type: '',
 		description: '',
 		timeToDo: 0,

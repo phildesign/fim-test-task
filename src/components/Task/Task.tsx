@@ -16,7 +16,7 @@ const ItemWrapperStyled = styled('div')({
 	textAlign: 'left',
 });
 
-const Task = ({ task, ...other }: TaskProps) => {
+const Task = ({ task }: TaskProps) => {
 	return (
 		<>
 			<ItemWrapperStyled>

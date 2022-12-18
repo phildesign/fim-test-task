@@ -1,5 +1,4 @@
-import { IconButton, styled } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { styled } from '@mui/material';
 
 import Task from '../Task/Task';
 import { TaskListProps } from './TaskList.props';
@@ -12,7 +11,7 @@ const HeaderWrapperStyled = styled('div')({
 	padding: '5px 25px',
 });
 
-const ListWithAllTasks = ({ tasks, setTasks }: TaskListProps) => {
+const TaskList = ({ tasks }: TaskListProps) => {
 	return (
 		<div>
 			<HeaderWrapperStyled>
@@ -26,4 +25,4 @@ const ListWithAllTasks = ({ tasks, setTasks }: TaskListProps) => {
 	);
 };
 
-export default ListWithAllTasks;
+export default TaskList;
