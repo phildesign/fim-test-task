@@ -33,10 +33,8 @@ const Form = ({ setTasks }: FormProps) => {
 	};
 
 	return (
-		<div style={{ borderBottom: '1px solid black', marginBottom: '30px' }}>
-			<form
-				action="#"
-				style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '30px' }}>
+		<div className="form-wrapper">
+			<form action="#" className="form">
 				<label htmlFor="type">
 					Task Type
 					<InputStyled
