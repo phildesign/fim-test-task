@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fim-test-task/static/css/main.0fe335a3.css",
+    "main.js": "/fim-test-task/static/js/main.a19006f1.js",
+    "index.html": "/fim-test-task/index.html",
+    "main.0fe335a3.css.map": "/fim-test-task/static/css/main.0fe335a3.css.map",
+    "main.a19006f1.js.map": "/fim-test-task/static/js/main.a19006f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fe335a3.css",
+    "static/js/main.a19006f1.js"
+  ]
+}
