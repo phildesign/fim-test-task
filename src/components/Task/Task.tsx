@@ -9,7 +9,6 @@ const TaskStyled = styled('div')({
 	gap: '20px',
 	alignItems: 'center',
 	backgroundColor: 'lightgrey',
-	marginBottom: 10,
 	borderRadius: 10,
 	boxShadow: '10px, 10px, 10px grey',
 	padding: '15px 20px',

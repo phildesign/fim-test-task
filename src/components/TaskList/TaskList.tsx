@@ -3,7 +3,13 @@ import { styled } from '@mui/material';
 import Task from '../Task/Task';
 import { TaskListProps } from './TaskList.props';
 
-const HeaderWrapperStyled = styled('div')({
+const TaskListStyled = styled('div')({
+	display: 'flex',
+	flexDirection: 'column',
+	gap: 15,
+});
+
+const TaskListHeaderStyled = styled('div')({
 	display: 'flex',
 	alignItems: 'center',
 	textAlign: 'left',
@@ -13,15 +19,14 @@ const HeaderWrapperStyled = styled('div')({
 
 const TaskList = ({ tasks }: TaskListProps) => {
 	return (
-		<div>
-			<HeaderWrapperStyled>
-				<p style={{ width: '20%' }}>Type</p>
-				<p style={{ width: '50%' }}>description</p>
-				<p style={{ width: '20%' }}>Time to do</p>
-				<div style={{ width: '10%' }}></div>
-			</HeaderWrapperStyled>
-			{!!tasks.length && tasks.map((task, index) => <Task key={index} task={task} />)}
-		</div>
+		<TaskListStyled>
+			<TaskListHeaderStyled>
+				<div>Type</div>
+				<div>description</div>
+				<div>Time to do</div>
+			</TaskListHeaderStyled>
+			{tasks.length && tasks.map((task, index) => <Task key={index} {...task} />)}
+		</TaskListStyled>
 	);
 };
 
