@@ -3,3 +3,8 @@ export interface Mock {
 	description: string;
 	timeToDo?: number;
 }
+
+export enum SortEnum {
+	DESC = 'desc',
+	ASC = 'asc',
+}

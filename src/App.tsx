@@ -1,13 +1,13 @@
-import React from 'react';
+import Box from '@mui/material/Box';
 import MainPage from './pages';
 
 import './App.css';
 
 const App = () => {
 	return (
-		<div className="App">
+		<Box className="App">
 			<MainPage />
-		</div>
+		</Box>
 	);
 };
 
