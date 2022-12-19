@@ -10,11 +10,13 @@ const TaskListStyled = styled('div')({
 });
 
 const TaskListHeaderStyled = styled('div')({
-	display: 'flex',
+	display: 'grid',
+	gridTemplateColumns: '200px 1fr 200px 150px',
 	alignItems: 'center',
 	textAlign: 'left',
 	justifyContent: 'flex-start',
-	padding: '5px 25px',
+	padding: '0 20px',
+	gap: '20px',
 });
 
 const TaskList = ({ tasks }: TaskListProps) => {
