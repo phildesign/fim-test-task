@@ -1,15 +1,18 @@
 import { useState, BaseSyntheticEvent } from 'react';
-import { Button, styled } from '@mui/material';
+import { Button, styled, TextField } from '@mui/material';
 
 import { FormProps } from './Form.props';
 import { Mock } from '../../interfaces/mock.interface';
 
-const InputStyled = styled('input')({
-	display: 'block',
-	border: '1px solid black',
-	padding: 10,
-	borderRadius: 5,
-	marginTop: 10,
+const FormStyled = styled('div')({
+	borderBottom: '1px solid #000',
+	marginBottom: '30px',
+});
+
+const FormFieldsStyled = styled('div')({
+	display: 'flex',
+	justifyContent: 'space-between',
+	marginBottom: '30px',
 });
 
 const Form = ({ setTasks }: FormProps) => {
@@ -33,42 +36,35 @@ const Form = ({ setTasks }: FormProps) => {
 	};
 
 	return (
-		<div className="form-wrapper">
-			<form action="#" className="form">
-				<label htmlFor="type">
-					Task Type
-					<InputStyled
-						value={formState.type}
-						onChange={handleInputChange}
-						type="text"
-						name="type"
-						id="type"
-					/>
-				</label>
-				<label htmlFor="description">
-					Description
-					<InputStyled
-						value={formState.description}
-						onChange={handleInputChange}
-						type="text"
-						name="description"
-					/>
-				</label>
-				<label htmlFor="timeToDo">
-					Time to do
-					<InputStyled
-						value={formState.timeToDo}
-						onChange={handleInputChange}
-						type="text"
-						name="timeToDo"
-					/>
-				</label>
-
-				<Button variant="outlined" type="submit" onClick={handleSubmit}>
+		<FormStyled onClick={handleSubmit}>
+			<FormFieldsStyled>
+				<TextField
+					required
+					label="Task Type"
+					color="primary"
+					name="type"
+					value={formState.type}
+					onChange={handleInputChange}
+				/>
+				<TextField
+					required
+					label="Description"
+					name="description"
+					value={formState.description}
+					onChange={handleInputChange}
+				/>
+				<TextField
+					label="Time to do"
+					type="number"
+					name="timeToDo"
+					value={formState.timeToDo}
+					onChange={handleInputChange}
+				/>
+				<Button variant="outlined" type="submit">
 					Add
 				</Button>
-			</form>
-		</div>
+			</FormFieldsStyled>
+		</FormStyled>
 	);
 };
 
